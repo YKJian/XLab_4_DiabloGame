@@ -113,17 +113,17 @@ class Program
     }
 }
 
+public interface IDamageable
+{
+    public void TakeDamage(int damage);
+}
+
 public class Player : IDamageable
 {
     public void TakeDamage(int damage)
     {
-        Console.WriteLine("Got damage");
+        Console.WriteLine("Player got damage");
     }
-}
-
-public interface IDamageable
-{
-    public void TakeDamage(int damage);
 }
 
 public abstract class Monster : IDamageable
